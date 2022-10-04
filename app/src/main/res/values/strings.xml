@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Furaha &amp; Baraka</string>
+    <string name="message">I made it</string>
+    <string name="please_click_back_again_to_exit">please click back again to exit</string>
+    <string name="image_contentDescription">Image</string>
+    <string name="nav_my_profile">My Profile</string>
+    <string name="nav_sign_out">Sign Out</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <!--    <string name="google_maps_api_key">AIzaSyAQUP5JYFkggn6po5YcXF_fZzeehR7xDc0</string>-->
+    <!--<string name="google_maps_api_key">AIzaSyCsUz2dte4dwqAuLncKJTxVv_padJrPerQ</string>-->
+    <!--    <string name="google_maps_api_key">AIzaSyC_S-_NkDsacUdfEt_RXyi82g7gEFaDd2s</string>-->
+    <string name="google_maps_api_key">AIzaSyBX8mBhKCxxukZSY7nJdMByvSGeJB-LAfI</string>
+    <string-array name="Branches">
+        <item>Kilifi</item>
+        <item>Nairobi</item>
+        <item>Nyahururu</item>
+        <item>Embu</item>
+        <item>Kwale</item>
+    </string-array>
+    <string name="farms">Furaha &amp; Baraka Farms</string>
+    <string name="maps">Maps</string>
+    <string name="name">Name:</string>
+    <string name="date">Date:</string>
+    <string name="tree">Tree:</string>
+    <string name="type">Type:</string>
+    <string name="status">Status:</string>
+    <string name="des">Description</string>
+    <string name="submit">Submit</string>
+    <string name="field_name">Field Owner:</string>
+    <string name="map">Map</string>
+    <string name="please_wait">Please Wait&#8230;</string>
+    <string name="sign_in">Sign In</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="update">Update</string>
+    <string name="mobile">Mobile</string>
+    <string name="my_profile_title">My Profile</string>
+    <string name="save">Send to firebase</string>
+    <string name="fruit">Fruit</string>
+    <string name="exotic">Exotic</string>
+    <string name="indigenous">Indigenous</string>
+    <string name="tree_type">Tree Type</string>
+    <string name="search">Search</string>
+    <string name="owner">Owner</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="branch">Branch</string>
+    <string name="county">County</string>
+    <string name="sub_county">Sub County</string>
+    <string name="field_location">Field Location</string>
+    <string name="field_details">Field Details</string>
+    <string name="field_owner">Field Owner</string>
+    <string name="send_email">Send Email</string>
+    <string name="welcome">Welcome to Furaha &amp; Baraka Farms</string>
+    <string name="click_here_to_continue">Click Here to Continue</string>
+    <string name="branch_name">Branch Name</string>
+    <string name="vision">Greening Africa</string>
+    <string name="proceed">Proceed to Fields</string>
+    <string name="profile">Profile</string>
+    <string name="tree_name">Tree Name:</string>
+    <string name="category">Tree Category</string>
+    <string name="visit_date">Visit Date:</string>
+    <string name="tree_age">Age (Days):</string>
+    <string name="tree_status">Tree Status: </string>
+    <string name="login">Login</string>
+    <string name="add">Add</string>
+    <string name="cat">"Category: "</string>
+</resources>

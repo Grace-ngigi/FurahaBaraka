@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "662575179980",
+    "project_id": "furahaandbarakaapp",
+    "storage_bucket": "furahaandbarakaapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662575179980:android:36317ddb5c70e03f62fa69",
+        "android_client_info": {
+          "package_name": "com.sais.furahabaraka"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "662575179980-2jq79v3acje49q2gmcq9p7rasvq69apo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ_lQmYVpkjr8w0ZQmvt9V8dzWTPFLXTc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "662575179980-2jq79v3acje49q2gmcq9p7rasvq69apo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662575179980:android:71fab1dc8dfb0bf562fa69",
+        "android_client_info": {
+          "package_name": "com.sais.tortree"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "662575179980-2jq79v3acje49q2gmcq9p7rasvq69apo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ_lQmYVpkjr8w0ZQmvt9V8dzWTPFLXTc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "662575179980-2jq79v3acje49q2gmcq9p7rasvq69apo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
