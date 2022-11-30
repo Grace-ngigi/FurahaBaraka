@@ -27,14 +27,14 @@ data class Visit(
 		TODO("Not yet implemented")
 	}
 
-	override fun writeToParcel(parcel: Parcel?, p1: Int) {
-		parcel?.writeString(status)
-		parcel?.writeString(date)
-		parcel?.writeString(description)
-		parcel?.writeString(image)
-		parcel?.writeString(treeId)
-		parcel?.writeTypedList(age)
-		parcel?.writeString(visitId)
+	override fun writeToParcel(p0: Parcel, p1: Int) {
+		p0.writeString(status)
+		p0.writeString(date)
+		p0.writeString(description)
+		p0.writeString(image)
+		p0.writeString(treeId)
+		p0.writeTypedList(age)
+		p0.writeString(visitId)
 
 	}
 

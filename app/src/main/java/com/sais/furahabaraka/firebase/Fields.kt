@@ -47,23 +47,23 @@ data class Fields(
 		TODO("Not yet implemented")
 	}
 
-	override fun writeToParcel(parcel: Parcel?, p1: Int) {
-		parcel?.writeString(branchName)
-		parcel?.writeString(farmId)
-		parcel?.writeString(fieldName)
-		parcel?.writeInt(size)
-		parcel?.writeInt(fruits)
-		parcel?.writeInt(exotic)
-		parcel?.writeInt(indigenous)
-		parcel?.writeString(description)
-		parcel?.writeString(county)
-		parcel?.writeString(subCounty)
-		parcel?.writeString(image)
-		parcel?.writeDouble(latitude)
-		parcel?.writeDouble(longitude)
-		parcel?.writeString(owner)
-		parcel?.writeString(date)
-		parcel?.writeString(fieldId)
+	override fun writeToParcel(p0: Parcel, p1: Int) {
+		p0.writeString(branchName)
+		p0.writeString(farmId)
+		p0.writeString(fieldName)
+		p0.writeInt(size)
+		p0.writeInt(fruits)
+		p0.writeInt(exotic)
+		p0.writeInt(indigenous)
+		p0.writeString(description)
+		p0.writeString(county)
+		p0.writeString(subCounty)
+		p0.writeString(image)
+		p0.writeDouble(latitude)
+		p0.writeDouble(longitude)
+		p0.writeString(owner)
+		p0.writeString(date)
+		p0.writeString(fieldId)
 	}
 
 	companion object CREATOR : Parcelable.Creator<Fields> {

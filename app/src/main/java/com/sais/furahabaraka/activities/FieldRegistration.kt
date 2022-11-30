@@ -342,20 +342,6 @@ showErrorSnackBar( "Your location provider is turned off. Please turn it on.")
             MediaStore.Images.Media.insertImage(context.contentResolver, image, "${UUID.randomUUID()}", null)
         return Uri.parse(path)
     }
-    private  fun saveImageToStorage(bitmap: Bitmap): Uri{
-        val wrapper = ContextWrapper(applicationContext)
-        var file = wrapper.getDir(IMAGE_DIRECTORY, Context.MODE_PRIVATE)
-        file = File(file,"${UUID.randomUUID()}.jpg")
-        try {
-            val  stream : OutputStream = FileOutputStream(file)
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
-            stream.flush()
-            stream.close()
-        } catch (e:IOException){
-            e.printStackTrace()
-        }
-        return  Uri.parse(file.absolutePath)
-    }
 
     private fun uploadImageToFirestore(){
         showProgressDialog(resources.getString(R.string.please_wait))

@@ -32,16 +32,16 @@ data class Trees(
 		TODO("Not yet implemented")
 	}
 
-	override fun writeToParcel(parcel: Parcel?, p1: Int) {
-		parcel?.writeString(treeName)
-		parcel?.writeString(farmId)
-		parcel?.writeString(treeType)
-		parcel?.writeString(timeStamp)
-		parcel?.writeString(description)
-		parcel?.writeString(image)
-		parcel?.writeDouble(latitude)
-		parcel?.writeDouble(longitude)
-		parcel?.writeString(treeId)
+	override fun writeToParcel(p0: Parcel, p1: Int) {
+		p0.writeString(treeName)
+		p0.writeString(farmId)
+		p0.writeString(treeType)
+		p0.writeString(timeStamp)
+		p0.writeString(description)
+		p0.writeString(image)
+		p0.writeDouble(latitude)
+		p0.writeDouble(longitude)
+		p0.writeString(treeId)
 	}
 
 	companion object CREATOR : Parcelable.Creator<Trees> {

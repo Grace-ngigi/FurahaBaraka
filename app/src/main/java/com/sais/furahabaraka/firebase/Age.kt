@@ -19,10 +19,10 @@ data class Age(
 		TODO("Not yet implemented")
 	}
 
-	override fun writeToParcel(parcel: Parcel?, p1: Int) {
-		parcel?.writeInt(years)
-		parcel?.writeInt(months)
-		parcel?.writeInt(days)
+	override fun writeToParcel(p0: Parcel, p1: Int) {
+		p0.writeInt(years)
+		p0.writeInt(months)
+		p0.writeInt(days)
 	}
 
 	companion object CREATOR : Parcelable.Creator<Age> {

@@ -77,7 +77,7 @@ class FieldDetailActivity : BaseActivity() {
 		val treesAdapter = TreesAdapter(this, treeInfo)
 		binding?.rvVisits?.adapter = treesAdapter
 
-				treesAdapter.setOnClickListener(object : TreesAdapter.OnClickListener {
+		treesAdapter.setOnClickListener(object : TreesAdapter.OnClickListener {
 					override fun onClick(position: Int, item: Trees) {
 						val intent = Intent(this@FieldDetailActivity, TreeDetailActivity::class.java)
 						intent.putExtra(Constants.EXTRA_TREE_DETAILS, item)

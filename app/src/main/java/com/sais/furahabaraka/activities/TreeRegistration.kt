@@ -326,7 +326,7 @@ class TreeRegistration : BaseActivity() {
         val treeType = radioGroupText()
         val description = binding?.etTreeDescription?.text.toString()
 
-            when {
+        when {
                 treeName!!.isEmpty() -> {
                     showErrorSnackBar("Please Select The Tree Name")
                 }

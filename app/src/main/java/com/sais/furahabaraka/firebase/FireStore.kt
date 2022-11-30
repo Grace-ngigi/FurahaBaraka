@@ -117,7 +117,7 @@ class FireStore {
 
 	fun saveFieldToFirebase(activity: FieldRegistration, field: Fields) {
 		mFireStore.collection(Constants.FIELDS)
-			.document()
+			.document(field.fieldId)
 			.set(field, SetOptions.merge())
 			.addOnSuccessListener {
 				activity.hideProgressDialog()
@@ -240,7 +240,7 @@ class FireStore {
 
 	fun saveTreeToFirebase(activity: TreeRegistration, trees: Trees) {
 		mFireStore.collection(Constants.TREES)
-			.document()
+			.document(trees.treeId)
 			.set(trees, SetOptions.merge())
 			.addOnSuccessListener {
 				activity.hideProgressDialog()
@@ -294,7 +294,7 @@ class FireStore {
 
 	fun saveVisitToFirebase(activity: VisitRegistration, visit: Visit) {
 		mFireStore.collection(Constants.VISITS)
-			.document()
+			.document(visit.visitId)
 			.set(visit, SetOptions.merge())
 			.addOnSuccessListener {
 				activity.hideProgressDialog()
@@ -322,8 +322,6 @@ class FireStore {
 				Log.e(activity.javaClass.simpleName, "Error", exception)
 			}
 	}
-
-
 }
 
 

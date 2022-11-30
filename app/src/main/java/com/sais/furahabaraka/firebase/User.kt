@@ -20,11 +20,11 @@ val phone:Long = 0,
 		TODO("Not yet implemented")
 	}
 
-	override fun writeToParcel(dest: Parcel?, flags: Int) {
-		dest?.writeString(id)
-		dest?.writeString(name)
-		dest?.writeString(email)
-		dest?.writeLong(phone)
+	override fun writeToParcel(p0: Parcel, flags: Int) {
+		p0.writeString(id)
+		p0.writeString(name)
+		p0.writeString(email)
+		p0.writeLong(phone)
 	}
 
 	companion object CREATOR : Parcelable.Creator<User> {
