@@ -65,4 +65,5 @@
     <string name="login">Login</string>
     <string name="add">Add</string>
     <string name="cat">"Category: "</string>
+    <string name="app_version">App Version: v4.22.1.4</string>
 </resources>

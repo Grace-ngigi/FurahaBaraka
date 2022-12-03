@@ -42,6 +42,7 @@ import com.sais.furahabaraka.utils.Constants.IMAGE_DIRECTORY
 import com.sais.furahabaraka.utils.Convertion
 import java.io.*
 import java.text.SimpleDateFormat
+import java.time.LocalDate
 import java.util.*
 
 class FieldRegistration : BaseActivity() {
@@ -250,13 +251,13 @@ showErrorSnackBar( "Your location provider is turned off. Please turn it on.")
             }.show()
     }
 
-    private fun getCurrentDate() : String {
-        var currentDate = ""
-        val myFormat = "dd.MM.yyyy"
-        val sdf = SimpleDateFormat(myFormat, Locale.getDefault())
-        currentDate= sdf.format(cal.time).toString()
-        return currentDate
-    }
+//    private fun getCurrentDate() : String {
+//        var currentDate = ""
+//        val myFormat = "dd.MM.yyyy"
+//        val sdf = SimpleDateFormat(myFormat, Locale.getDefault())
+//        currentDate= sdf.format(cal.time).toString()
+//        return currentDate
+//    }
 
     private fun addField() {
         val id = mFireStore.collection(Constants.FIELDS).document().id
@@ -264,7 +265,7 @@ showErrorSnackBar( "Your location provider is turned off. Please turn it on.")
         val subCounty = binding.etSubCounty.text.toString()
         val branch = binding.etBranchName.text.toString()
         val currentUser = FireStore().getCurrentUserId()
-        val date = getCurrentDate()
+        val date = LocalDate.now().toString()
         val fieldName = binding.etFieldName.text.toString()
         val farmId = binding.etFieldID.text.toString()
         val fieldSize = binding.etFieldSize.text.toString()

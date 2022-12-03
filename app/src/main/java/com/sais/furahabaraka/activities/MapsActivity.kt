@@ -31,14 +31,15 @@ import com.sais.furahabaraka.R
 import com.sais.furahabaraka.databinding.ActivityMapsBinding
 import com.sais.furahabaraka.firebase.FireStore
 import com.sais.furahabaraka.firebase.Trees
+import com.sais.furahabaraka.firebase.Visit
 
 class MapsActivity : BaseActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
 	private lateinit var mMap: GoogleMap
 	private lateinit var binding: ActivityMapsBinding
 	private lateinit var fusedLocation: FusedLocationProviderClient
-	lateinit var currentLocation: Location
-	lateinit var visits : ArrayList<Trees>
+	private lateinit var currentLocation: Location
+	private lateinit var treeStatus : String
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
@@ -71,7 +72,7 @@ class MapsActivity : BaseActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClick
 				if (location != null) {
 					currentLocation = location
 					val loc = LatLng(currentLocation.latitude, currentLocation.longitude)
-					placeMarkerOnMap(loc, "CurrentLocation")
+					placeMarkerOnMap(loc, "Current Location")
 
 //					mMap.addMarker(MarkerOptions().position(loc).title("Mark"))
 					mMap.moveCamera(CameraUpdateFactory.newLatLng(loc))
@@ -85,22 +86,16 @@ class MapsActivity : BaseActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClick
 		}
 	}
 
-	private fun placeMarkerOnMap(currentLocation: LatLng, userInfo: String){
+	private fun placeMarkerOnMap(currentLocation: LatLng, visitName: String){
 		val markerOptions = MarkerOptions().position(currentLocation)
-		markerOptions.title(userInfo)
+		markerOptions.title(visitName)
 		mMap.addMarker(markerOptions)
 	}
 
-	fun fetchLocationFromDatabase(visitInfo: ArrayList<Trees>){
-		visits = visitInfo
-		for (visit in visits) {
-			val name = visit.treeName
-			val type = visit.treeType
-//			vInfo.add(name)
-//			vInfo.add(type)
-//			vInfo.add(status)
-
-			val location = LatLng(visit.latitude, visit.longitude)
+	fun fetchLocationFromDatabase(trees: ArrayList<Trees>){
+		for (tree in trees) {
+			val name = tree.treeName
+			val location = LatLng(tree.latitude, tree.longitude)
 			placeMarkerOnMap(location, name)
 //			mMap.moveCamera(CameraUpdateFactory.newLatLng(location))
 		}

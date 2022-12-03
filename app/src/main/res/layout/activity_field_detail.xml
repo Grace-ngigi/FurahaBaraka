@@ -63,6 +63,7 @@
                 android:layout_height="120dp"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"
+                android:layout_gravity="center"
                 android:src="@drawable/add_screen_image_placeholder"/>
 
             <LinearLayout
@@ -76,7 +77,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="10dp"
-                    android:text="Field Size(Acres)"
+                    android:text="Field Size"
                     android:textColor="@color/black"
                     android:textSize="@dimen/textSize"
                     android:textStyle="bold" />
@@ -91,17 +92,28 @@
                     tools:text="Field Name" />
 
                 <TextView
+                    android:id="@+id/tvTotal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="10dp"
-                    android:text="Trees(Total)"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize"
+                    android:text="Field Size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Carbon Absorbed"
                     android:textColor="@color/black"
                     android:textSize="@dimen/textSize"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tvTotal"
+                    android:id="@+id/tvCarbon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"

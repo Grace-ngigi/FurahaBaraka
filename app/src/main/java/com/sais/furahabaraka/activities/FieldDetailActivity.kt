@@ -11,11 +11,15 @@ import com.bumptech.glide.Glide
 import com.sais.furahabaraka.R
 import com.sais.furahabaraka.adapters.TreesAdapter
 import com.sais.furahabaraka.databinding.ActivityFieldDetailBinding
+import com.sais.furahabaraka.firebase.Age
 import com.sais.furahabaraka.firebase.Fields
 import com.sais.furahabaraka.firebase.FireStore
 import com.sais.furahabaraka.firebase.Trees
 import com.sais.furahabaraka.utils.Constants
 import com.sais.furahabaraka.utils.SwipeToEdit
+import java.time.LocalDate
+import java.time.Period
+import java.time.format.DateTimeFormatter
 
 class FieldDetailActivity : BaseActivity() {
 	private  var binding: ActivityFieldDetailBinding? = null
@@ -41,9 +45,13 @@ class FieldDetailActivity : BaseActivity() {
 			.placeholder(R.drawable.ic_person_add_24)
 			.into(binding!!.ivFieldImage)
 			val total = fields.fruits + fields.indigenous + fields.exotic
-			binding?.tvTotal?.text = total.toString()
-			binding?.tvFarmSize?.text = fields.size.toString()
+			binding?.tvTotal?.text = buildString { append(total.toString())
+				 append(" Trees")}
+			binding?.tvFarmSize?.text = buildString { append(fields.size.toString())
+				 append(" Acres")}
 			binding?.tvFieldName?.text = fields.fieldName
+		getCarbonAbsorbed(total)
+
 
 		binding?.fabAddVisit?.setOnClickListener {
 			val intent = Intent(this@FieldDetailActivity, TreeRegistration::class.java)
@@ -51,6 +59,15 @@ class FieldDetailActivity : BaseActivity() {
 			startActivityForResult(intent, Constants.CREATE_TREE_REQUEST_CODE)
 		}
 		FireStore().getTreesList(this, fields )
+	}
+
+	private fun getCarbonAbsorbed(total: Int) {
+		val currentDate = LocalDate.now()
+		val birthDate = LocalDate.parse(fields.date, DateTimeFormatter.ISO_DATE)
+		val period = Period.between(birthDate, currentDate)
+//		val years = if (period.years < 1) { 1 } else { period.years }
+		binding?.tvCarbon?.text = buildString { append((total * 0.83 * period.months).toString())
+			append(" KGs")}
 	}
 
 	override fun onResume() {
